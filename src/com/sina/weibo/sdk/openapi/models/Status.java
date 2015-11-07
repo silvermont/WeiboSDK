@@ -96,14 +96,7 @@ public class Status {
 
 	public static Status parse(JSONObject jsonObject) {
 		if (null == jsonObject) {
-			// added by lzy
-			// start
-			// 用来判断是否有转发微博
-			Status status = new Status();
-			status.id = "0";
-			return status;
-			// return null;
-			// end
+			return null;
 		}
 
 		Status status = new Status();
@@ -148,11 +141,6 @@ public class Status {
 					status.pic_urls.add(tmpObject.optString("thumbnail_pic"));
 				}
 			}
-		} else {
-			// added by lzy
-			// start
-			status.pic_urls = new ArrayList<String>();
-			// end
 		}
 
 		// status.ad = jsonObject.optString("ad", "");
