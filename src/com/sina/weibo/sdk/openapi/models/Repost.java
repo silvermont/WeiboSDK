@@ -18,8 +18,6 @@ package com.sina.weibo.sdk.openapi.models;
 
 import org.json.JSONObject;
 
-import android.util.Log;
-
 /**
  * 转发结构体。
  * 
